@@ -1,0 +1,2 @@
+class TwelveWeekYear < ApplicationRecord
+end

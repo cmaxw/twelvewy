@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Twelve Week Years</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Starts on</th>
+      <th>Ends on</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @twelve_week_years.each do |twelve_week_year| %>
+      <tr>
+        <td><%= twelve_week_year.name %></td>
+        <td><%= twelve_week_year.starts_on %></td>
+        <td><%= twelve_week_year.ends_on %></td>
+        <td><%= link_to 'Show', twelve_week_year %></td>
+        <td><%= link_to 'Edit', edit_twelve_week_year_path(twelve_week_year) %></td>
+        <td><%= link_to 'Destroy', twelve_week_year, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Twelve Week Year', new_twelve_week_year_path %>
