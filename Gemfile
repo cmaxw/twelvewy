@@ -54,4 +54,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'pessimize', "~> 0.3.0"
-gem 'material_design_lite-rails', '~> 1.3'
+gem 'material_design_lite-rails', '~> 1.3.0'
+gem "therubyracer", "~> 0.12.3"
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "twitter-bootstrap-rails"
