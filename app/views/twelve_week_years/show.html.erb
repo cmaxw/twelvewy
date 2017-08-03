@@ -1,19 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @twelve_week_year.name %>
-</p>
-
-<p>
-  <strong>Starts on:</strong>
-  <%= @twelve_week_year.starts_on %>
-</p>
-
-<p>
-  <strong>Ends on:</strong>
-  <%= @twelve_week_year.ends_on %>
-</p>
+<h1>Year: <%= @twelve_week_year.name %></h1>
+<h2><%= @twelve_week_year.starts_on %> &mdash; <%= @twelve_week_year.ends_on %></h2>
+<hr/>
+<h3>Goals</h3>
+<ul>
+  <% @twelve_week_year.goals.each do |goal| %>
+    <li><%= goal.name %></li>
+  <% end %>
+</ul>
+<hr/>
+<h4>New Goal</h4>
+<%= render partial: "goals/form", locals: {goal: @twelve_week_year.goals.build} %>
 
 <%= link_to 'Edit', edit_twelve_week_year_path(@twelve_week_year) %> |
 <%= link_to 'Back', twelve_week_years_path %>

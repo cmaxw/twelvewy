@@ -12,14 +12,9 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
     <%= form.text_field :name, id: :goal_name %>
   </div>
-
-  <div class="field">
-    <%= form.label :twelve_week_year_id %>
-    <%= form.text_field :twelve_week_year_id, id: :goal_twelve_week_year_id %>
-  </div>
+  <%= form.hidden_field :twelve_week_year_id, id: :goal_twelve_week_year_id %>
 
   <div class="actions">
     <%= form.submit %>
